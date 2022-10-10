@@ -1,6 +1,6 @@
 <template>
     <div class="contador">
-        <span>{{contador}}</span>
+        <span>{{ contador }}</span>
         <button @click="adicionar">+</button>
         <button @click="subtrair">-</button>
     </div>
@@ -8,36 +8,37 @@
 
 <script>
 export default {
-    data(){
-        return{
+    data() {
+        return {
             contador: 0
         }
     },
     methods: {
-        adicionar(){
+        adicionar() {
             this.contador++
         },
-        subtrair(){
+        subtrair() {
             this.contador--
         }
     }
 }
 </script>
 
-<style>
-    .contador span{
-        border-bottom: 1px solid #ccc;
-        height: 30px;
-        padding: 5px 25px;
-    }
+<!-- scoped = esse estilo vai ficar apenas para esse componente -->
+<style scoped>
+span {
+    border-bottom: 1px solid #ccc;
+    height: 30px;
+    padding: 5px 25px;
+}
 
-    .contador button{
-        height: 30px;
-        width: 30px;
-        border-radius: 15px;
-        background-color: coral;
-        color: white;
-        margin-left: 10px;
-        outline: none;
-    }
+button {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: coral;
+    color: white;
+    margin-left: 10px;
+    border: none;
+}
 </style>
